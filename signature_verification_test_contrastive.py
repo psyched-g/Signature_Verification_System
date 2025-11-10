@@ -38,7 +38,7 @@ class EuclideanDistanceLayer(tf.keras.layers.Layer):
         return (input_shape[0][0], 1)
 
 # ======================================================
-# ⚙️ Configuration
+# ⚙️ Configurationddd
 # ======================================================
 MODEL_PATH = r"C:\Users\gauth\OneDrive\Documents\WORK\MTech\MLES\PROJECT2\signature_verification_contrastive.keras"
 IMG_SIZE = (128, 128)
