@@ -116,8 +116,8 @@ print("✅ Model loaded successfully.")
 all_people = sorted(
     [p for p in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, p))],
     key=numeric_sort
-)[:10]
-test_people = all_people[8:]
+)[:14]
+test_people = all_people[12:]
 print(f"🧩 Loading test data from unseen persons: {test_people}")
 
 X_test, y_test = load_pairs_subset(BASE_DIR, test_people)

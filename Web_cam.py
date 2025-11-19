@@ -42,7 +42,7 @@ class EuclideanDistanceLayer(tf.keras.layers.Layer):
 # ======================================================
 MODEL_PATH = r"C:\Users\gauth\OneDrive\Documents\WORK\MTech\MLES\PROJECT2\signature_verification_contrastive.keras"
 IMG_SIZE = (128, 128)
-THRESHOLD = 0.91  # From your evaluation best F1 threshold
+THRESHOLD = 0.91 # From your evaluation best F1 threshold
 
 # ======================================================
 # 🧠 Load Model

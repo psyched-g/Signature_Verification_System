@@ -22,15 +22,15 @@ import os
 import cv2
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras import layers, Model, backend as K
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras import layers, Model, backend as K # pyright: ignore[reportMissingImports]
+from tensorflow.keras.preprocessing.image import ImageDataGenerator # pyright: ignore[reportMissingImports]
 
 # ======================================================
 # ⚙️ CONFIGURATION
 # ======================================================
 BASE_DIR = r"C:\Users\gauth\OneDrive\Documents\WORK\MTech\MLES\signatures"
 IMG_SIZE = (128, 128)
-MODEL_PATH = r"C:\Users\gauth\OneDrive\Documents\WORK\MTech\MLES\PROJECT2\signature_verification_contrastive.keras"
+MODEL_PATH = r"C:\Users\gauth\OneDrive\Documents\WORK\MTech\MLES\PROJECT2\signature_verification_contrastive_2.0.keras"
 MARGIN = 1.0  # margin for contrastive loss
 
 # ======================================================
@@ -125,10 +125,10 @@ def load_pairs_subset(base_dir, person_list):
 all_people = sorted(
     [p for p in os.listdir(BASE_DIR) if os.path.isdir(os.path.join(BASE_DIR, p))],
     key=numeric_sort
-)[:10]
+)[:14]
 
-train_people = all_people[:8]
-test_people = all_people[8:]
+train_people = all_people[:12]
+test_people = all_people[12:]
 
 X_train, y_train = load_pairs_subset(BASE_DIR, train_people)
 X_test, y_test = load_pairs_subset(BASE_DIR, test_people)
